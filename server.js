@@ -30,13 +30,13 @@ var server = http.createServer(function (req, res) {
         });
         req.on('end', function(){
             if(qs.parse(body)['text']){                                         //'text' is the field name that should be used
-    	    if(qs.parse(body)['text'].toString().trim().length != 0){
-                    var post_data = qs.parse(body)['text'].toString();
-                    var uppercase_for_post = post_data.toUpperCase();
-                    res.end(uppercase_for_post);
+        	    if(qs.parse(body)['text'].toString().trim().length != 0){
+                        var post_data = qs.parse(body)['text'].toString();
+                        var uppercase_for_post = post_data.toUpperCase();
+                        res.end(uppercase_for_post);
+                    }
                 }
-            }
-                res.end("Something went wrong");
+            res.end("Something went wrong");
         });
     }
 
