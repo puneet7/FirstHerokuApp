@@ -3,8 +3,6 @@ var qs = require('querystring');
 
 
 var port = Number(process.env.PORT || 3000);
-
-
 var server = http.createServer(function (req, res) {
 
     var headers = {};
